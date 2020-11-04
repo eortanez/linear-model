@@ -68,6 +68,7 @@ new <- data.frame(ARM=88,GRIP=94)
 predict.lm(model.2,new)
 predict(model.2,new,interval="prediction")
 ```
+Model 2 is predicting a value of -0.5361543 and the 95 confidence interval is somewhere in the -3.107961 and 2.035652 . 
 
 ```{r}
 model.3 <- lm(SIMS~GRIP+ARM,data=dataF)
