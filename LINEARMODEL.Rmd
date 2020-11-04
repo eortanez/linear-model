@@ -43,4 +43,24 @@ basicNN <- ggplot(dataF,aes(y=SIMS,x=GRIP))
 basicNN + geom_point()+geom_smooth(method=lm)
 ``` 
   
-The plot of SIMS VS GRIP + ARM looks like a plane in 3D space and we don't have the tools available right now to plot it    
+The plot of SIMS VS GRIP + ARM looks like a plane in 3D space and we don't have the tools available right now to plot it   
+
+```{r}
+model.1 <- lm(SIMS~ARM,data=dataF)
+summary.lm(model.1)
+```
+
+```{r}
+model.2 <- lm(SIMS~GRIP,data=dataF)
+summary.lm(model.2)
+```
+
+The Adjusted R Squared in the model for SIMS ARM has a higher value than SIMS GRIP. That means the model for ARM is better than GRIP
+
+```{r}
+model.3 <- lm(SIMS~GRIP+ARM,data=dataF)
+summary.lm(model.3)
+```
+The adjusted R squared for this model is 0.5358 which is bigger than the adjusted R squared for Model 1 ans Model 2 which explains 
+more of a variation than either of the other 2 model does and just by exploring the adjusted R- squared if we are to rate the models 
+Model 2 is the worst one , Model 1 is the second best one and Model 3 is the best Model.  
