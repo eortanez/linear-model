@@ -86,3 +86,8 @@ predict(model.3,new,interval="prediction")
 ```{r}
 anova(model.1,model.3)
 ```
+The RSS of Model 1 is 217.88 and RSS of Model 2 is 188.43 which is about 30 points less than SIMS~ARM. This shows that the result is 
+signficant because we are testing whether or not it would change the value of our assessment. The result shows a low P value so we   
+we reject the null hypothesis that there is isn't any difference in how well the Model 1 explains ARM and how well Model 2 explains  
+ARM. This means that model 3 is doing a much better job of predicting it and that's why we reject the null hypothesis and therefore 
+conclude that this particular anova test shows model 3 is the better model.  
